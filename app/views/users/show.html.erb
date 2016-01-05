@@ -1,0 +1,12 @@
+<%= current_user.user_name %>'s Posts
+<% if @user.posts.exists? %>
+<% @user.posts.each do |up| %>
+<div>
+	<%= up.id %>
+	<%= up.content %>
+	<%= up.created_at %>
+	<%= hidden_field_tag 'post', up.id %>
+	<%= link_to'Delete', delete_post_path(up.id), method: :delete %>
+</div>
+<% end %>
+<% end %>

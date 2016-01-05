@@ -17,10 +17,3 @@ password
 User has many posts
 User has many followers
 User has many follows
-
-## Post Model has:
-Content
-Created At
-Updated at?
-Post Id
-User_id (person that made the post)

@@ -1,2 +1,12 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>What's been happening?</h1>
+<% @posts.each do |post| %>
+<div>
+	<p><%= post.content %>
+		<%= post.created_at %>
+		<%= post.user.user_name %>
+		<%= post.id %>
+	</p>
+		<%= link_to 'Delete Post', delete_post_path %>
+
+</div>
+<% end %>
