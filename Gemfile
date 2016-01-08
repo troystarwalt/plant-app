@@ -35,7 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'faker'
+  gem 'ffaker'
   gem 'rspec-rails', '~> 3.0.0'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
@@ -51,3 +51,5 @@ end
 
 gem 'devise'
 gem 'pry-rails'
+gem 'cancancan', '~> 1.10'
+gem 'font-awesome-rails'

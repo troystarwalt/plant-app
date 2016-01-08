@@ -1,12 +1,22 @@
-<h1>What's been happening?</h1>
-<% @posts.each do |post| %>
-<div>
-	<p><%= post.content %>
-		<%= post.created_at %>
-		<%= post.user.user_name %>
-		<%= post.id %>
-	</p>
-		<%= link_to 'Delete Post', delete_post_path %>
+<h1>Welcome to Plant.</h1>
 
-</div>
-<% end %>
+
+
+<hr>
+<div class='uk-flex uk-flex-center uk-flex-space-around uk-flex-wrap'>
+	<% @posts.each do |post| %>
+	<div class='uk-panel seed-list'>
+	<div class="uk-panel-hover uk-panel-space">
+		<p class="uk-panel-title"><%= post.content %></p>
+			<p><%= post.created_at %></p>
+			<p><%= post.user.user_name %></p>
+			<% if user_signed_in? %>
+			<% if current_user.id === post.user.id %>
+			<p><%= link_to 'Delete My Seed', delete_post_path(post.id), method: :delete %></p>
+			<% end %>
+			<% end %>
+			</div>
+		</div>
+		<% end %>
+	</div>
+	

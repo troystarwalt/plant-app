@@ -37,9 +37,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    byebug
     @user = current_user
     @post.destroy
+    flash[:notice] = "Post deleted."
     redirect_to show_user_path
   end
 
