@@ -9,42 +9,19 @@
 </head>
 <body>
 	<header>
-		<nav class="uk-navbar">
-			<ul class="uk-navbar-nav uk-hidden-small">
-				<li><%= link_to "Home", root_path %></li>
-				<% if user_signed_in? %>
-				<li>
-					<%= link_to "Logout", destroy_user_session_path, method: :delete %>
-				</li>
-				<li><%= link_to "Post", new_post_path %></li>
-				<li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-				<li><%= render 'layouts/shared/profile_items' %> </li>
-
-				<% else %>
-				<li><%= link_to "Sign Up", new_user_registration_path %></li>
-				<li><%= link_to "Sign In", new_user_session_path %></li>
-				<% end %>				
+		<nav class="">
+			<ul class="" id="navigation-list">
+			<%= link_to "Plant", root_path  %>
+					<%= render 'layouts/shared/navigation_links' %>
 			</ul>
-			<a href="#toggle-off-canvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas ></a>
+			<a href="#toggle-off-canvas" class="-toggle"></a>
 		</nav>
-		<div id="toggle-off-canvas" class="uk-offcanvas">
-			<div class="uk-offcanvas-bar">
-				<ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
-					<li><%= link_to "Home", root_path %></li>
-					<% if user_signed_in? %>
-					<li>
-						<%= link_to "Logout", destroy_user_session_path, method: :delete %>
-					</li>
-					<li><%= link_to "Post", new_post_path %></li>
-					<li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-					<li><%= render 'layouts/shared/profile_items' %> </li>
-
-					<% else %>
-					<li><%= link_to "Sign Up", new_user_registration_path %></li>
-					<li><%= link_to "Sign In", new_user_session_path %></li>
-					<% end %>	
+		<div id="toggle-off-canvas" class="#">
+			<div class="#">
+				<ul class="#">
+					<%= render 'layouts/shared/navigation_links' %>
 				</ul>
-				<div class="uk-panel">
+				<div class="#">
 					<p>Welcome to Plant.</p>
 					<p>Plant is a content first microblogging web app.</p>
 					<p>Take a few minutes to look around and create an account</p>
@@ -52,10 +29,9 @@
 			</div>
 		</div>
 	</header>
-
-	<div class=" container">
-		<p class="notice uk-alert-success"><%= notice %></p>
-		<p class="alert uk-alert-warning"><%= alert %></p>
+	<div class="container">
+		<p class="notice "><%= notice %></p>
+		<p class="alert"><%= alert %></p>
 		<%= yield %>
 	</div>
 </body>

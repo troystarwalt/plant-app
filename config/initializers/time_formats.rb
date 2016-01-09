@@ -1,0 +1,1 @@
+Time::DATE_FORMATS[:posts] = "Seeded on %x at %r"

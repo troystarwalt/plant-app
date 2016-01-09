@@ -13,7 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require uikit
-//= require_tree ./core
-//= require_tree ./components
+//= require foundation.min.js
 //= require_tree .

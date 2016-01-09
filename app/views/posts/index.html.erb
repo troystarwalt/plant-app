@@ -1,12 +1,12 @@
 <h1>Welcome to Plant.</h1>
-<h2>Below is a clean listing of all posts sorted by the date they were made.</h2>
+<h2>Below is a clean listing of all seeds sorted by the date they were made.</h2>
 <hr>
-<div class='uk-grid uk-grid-medium'>
+<div class='#'>
 	<% @posts.each do |post| %>
-	<div class='uk-panel uk-width-large-1-4 uk-width-medium-1-3 uk-width-small-1-2 seed-list'>
-		<div class="uk-panel-space">
-			<p class="uk-panel-title"><%= post.content %></p>
-			<p><%= post.created_at %></p>
+	<div class='# seed-list'>
+		<div class="#">
+			<p class="#"><%= post.content %></p>
+			<p><%= post.created_at.to_s(:posts) %></p>
 			<p><%= link_to post.user.user_name, show_user_path(post.user_id) %></p>
 			<% if user_signed_in? %>
 				<% if current_user.id === post.user.id %>
