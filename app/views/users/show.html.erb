@@ -1,12 +1,14 @@
-<%= current_user.user_name %>'s Posts
+<h1><%= @user.user_name %><span id="profile-header">'s Posts and Profile</span></h1>
 <% if @user.posts.exists? %>
-<% @user.posts.each do |up| %>
-<div>
-	<%= up.id %>
-	<%= up.content %>
-	<%= up.created_at %>
-	<%= hidden_field_tag 'post', up.id %>
-	<%= link_to'Delete', delete_post_path(up.id), method: :delete %>
-</div>
-<% end %>
+	<% @user.posts.each do |up| %>
+		<div>
+			<%= up.id %>
+			<%= up.content %>
+			<%= up.created_at %>
+			<%= hidden_field_tag 'post', up.id %>
+			<% if user_signed_in? && current_user.id === up.user_id %>
+			<%= link_to'Delete', delete_post_path(up.id), method: :delete %>
+			<% end %>
+		</div>
+	<% end %>
 <% end %>

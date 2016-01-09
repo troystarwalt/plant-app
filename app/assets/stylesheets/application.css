@@ -17,16 +17,18 @@
 
 body {
  	background-color: #2ecc71;
-
  }
 
 .container {
 	margin: 0 auto;
-	 	border-bottom: 0.5px solid #34495e;
+	border-bottom: 0.5px solid #34495e;
 
 }
 
-footer {
-	background-color: black;
+.form-submit-input {
+	margin-top: 2px;
+}
 
+#profile-header {
+	font-size: .5em;
 }
