@@ -10,8 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery2
 //= require jquery_ujs
 //= require turbolinks
-//= require foundation.min.js
+//= require foundation.min
+//= require app
 //= require_tree .
+
+console.log('opened'); 
+
+$( "#myButton" ).click(function() {
+	alert("Click");
+	console.log("closed")
+});
